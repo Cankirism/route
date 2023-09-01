@@ -8,15 +8,11 @@ export default function UserDetail() {
   useEffect(() => {
     getUserDetail();
   }, [params.id]);
-  const getUserDetail=async()=>{
-    const detail = await axios(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+  const getUserDetail = async () => {
+    const detail = await axios(
+      `https://jsonplaceholder.typicode.com/users/${params.id}`
+    );
     setUserDetail(detail.data);
-  }
-  return (
-    <div>
-        {JSON.stringify(userDetail)}
-     
-    </div>
-  )
- 
+  };
+  return <div>{JSON.stringify(userDetail)}</div>;
 }
