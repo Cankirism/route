@@ -12,7 +12,6 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <div className="App">
-    
      <Router>
       <Menu/>
       <Routes>
@@ -28,5 +27,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
